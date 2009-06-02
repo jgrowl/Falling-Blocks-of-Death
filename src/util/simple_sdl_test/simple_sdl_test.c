@@ -16,6 +16,9 @@
 #include <stdio.h>
 int main(int argc, char* argv[])
 {
+
+    ///TODO: Tetris goes here
+    
   if (SDL_Init(SDL_INIT_VIDEO) == -1)
     {
       fprintf(stderr, "Could not initialize SDL!\n");
