@@ -1,6 +1,9 @@
 #include "frameratecontroller.h"
 #include "SDL.h"
 
+// For debugging
+#include "stdio.h"
+
 float frame_time = 0.0f;
 float level_time = 0.0f;
 
@@ -9,15 +12,15 @@ static unsigned t1;
 static unsigned level_t0;
 static unsigned min_frame_time = 0;
 
-// Get time since application started in seconds
-static inline float now( void )
+// Get time since application started in milliseconds
+static inline unsigned now( void )
 {
     return SDL_GetTicks();
 }
 
 static inline float delta( unsigned t0, unsigned t1 )
 {
-    return (float)t1/1000.f - (float)t0/1000.f;
+    return (float)(t1-t0)/1000.f;
 }
 
 void FrameRate_Init( unsigned target )
@@ -26,6 +29,7 @@ void FrameRate_Init( unsigned target )
         target = 1;
         
     min_frame_time = 1000/target;
+    printf("min_frame_time = %u ms\n", min_frame_time);
     
     FrameRate_Reset();
 }
