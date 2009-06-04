@@ -1,4 +1,5 @@
 #include "level_demo.h"
+#include "frameratecontroller.h"
 #include <stdio.h>
 
 
@@ -23,12 +24,12 @@ static void Update( void )
         GS_next = GS_QUIT;
     --times;
     
-    printf("Update::level_demo\n");
+    printf("Update::level_demo - frame_time = %.04f sec\n", frame_time);
 }
 
 static void Draw( void )
 {
-    printf("Draw::level_demo\n");
+    printf("Draw::level_demo\n\n");
 }
 
 static void Free( void )
