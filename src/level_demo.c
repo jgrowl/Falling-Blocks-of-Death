@@ -42,4 +42,4 @@ static void Unload( void )
 }
 
 // global accessor
-const GameState GS_level_demo = {Load, Init, Update, Draw, Free, Unload};
+const struct GameState GS_level_demo = {Load, Init, Update, Draw, Free, Unload};

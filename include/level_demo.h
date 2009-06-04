@@ -4,7 +4,7 @@
 
 #include "gamestatemanager.h"
 
-extern const GameState GS_level_demo;   // Use this to access the level_demo's functions:
+extern const struct GameState GS_level_demo;   // Use this to access the level_demo's functions:
                                         // Load, Init, Update, Draw, Free, Unload
 
 

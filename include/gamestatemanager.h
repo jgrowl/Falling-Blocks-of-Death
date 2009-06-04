@@ -16,15 +16,15 @@ struct GameState
 
 // These three GameState pointers will be used heavily in the GameLoop function. It allows for
 // a generic game loop algorithm for each level and easy switching between levels.
-extern const GameState* GS_current;
-extern const GameState* GS_previous;
-extern const GameState* GS_next;
+extern const struct GameState* GS_current;
+extern const struct GameState* GS_previous;
+extern const struct GameState* GS_next;
 
-extern const GameState* GS_QUIT;
-extern const GameState* GS_RESTART;
+extern const struct GameState* GS_QUIT;
+extern const struct GameState* GS_RESTART;
 
 // Be sure to initialize the game state manager before using the above 3 GameState pointers.
-void GS_Initialize( const GameState* );
+void GS_Initialize( const struct GameState* );
 
 
 #endif // __GAMESTATEMANAGER_H__
