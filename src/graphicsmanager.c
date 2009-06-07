@@ -4,28 +4,23 @@
 
 void Graphics_Init( unsigned width, unsigned height )
 {
-    // Enable smooth shading
     glShadeModel( GL_SMOOTH );
 
-    // Background color
+    // background color
     glClearColor( 0.0f, 1.0f, 0.0f, 1.0f );
 
-    // Depth buffer setup
+    // depth buffer
     glClearDepth( 1.0f );
-
-    // Enables Depth Testing
     glEnable( GL_DEPTH_TEST );
+    glDepthFunc( GL_LEQUAL );
 
-    // Blending
+    // blending
     glEnable( GL_BLEND );
     glBlendFunc( GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA );
 
-    // The Type Of Depth Test To Do
-    glDepthFunc( GL_LEQUAL );
-
-    // Really Nice Perspective Calculations
     glHint( GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST );
     
+    // setup viewport
     Graphics_Resize( width, height );
 }
 
@@ -54,7 +49,7 @@ void Graphics_Resize( unsigned width, unsigned height )
 
 void Graphics_BeginFrame( void )
 {
-    // Clear the screen
+    // clear the screen
     glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
 }
 
