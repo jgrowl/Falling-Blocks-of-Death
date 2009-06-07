@@ -7,15 +7,6 @@ void Graphics_Init( unsigned width, unsigned height )
     // Enable smooth shading
     glShadeModel( GL_SMOOTH );
 
-    glEnable(GL_CULL_FACE);
-
-    // Textures
-    //glActiveTexture(GL_TEXTURE0);
-    //glEnable(GL_TEXTURE_2D);
-    //glTexEnvi( GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE );
-    //glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_MIRRORED_REPEAT);
-    //glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_MIRRORED_REPEAT);
-
     // Background color
     glClearColor( 0.0f, 1.0f, 0.0f, 1.0f );
 
@@ -25,22 +16,9 @@ void Graphics_Init( unsigned width, unsigned height )
     // Enables Depth Testing
     glEnable( GL_DEPTH_TEST );
 
-    // Lighting
-    //vec3_t flashLightPos = {0,0,0};
-    //vec4_t flashLightColor = {1.0, 0.0, 0.0, 1.0};
-    //vec3_t flashLightDir = {0,0,-1};
-    //glEnable(GL_LIGHTING);
-    //glEnable(GL_LIGHT0);
-    //glLightfv(GL_LIGHT0, GL_POSITION, flashLightPos);
-    //glLightfv(GL_LIGHT0, GL_AMBIENT, flashLightColor);
-    //glLightfv(GL_LIGHT0, GL_DIFFUSE, flashLightColor);
-    //glLightfv(GL_LIGHT0, GL_SPECULAR, flashLightColor);
-    //glLightfv(GL_LIGHT0, GL_SPOT_DIRECTION, flashLightDir);
-    //glLightf(GL_LIGHT0, GL_SPOT_CUTOFF, 120.0);
-
     // Blending
-    //glEnable( GL_BLEND );
-    //glBlendFunc( GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA );
+    glEnable( GL_BLEND );
+    glBlendFunc( GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA );
 
     // The Type Of Depth Test To Do
     glDepthFunc( GL_LEQUAL );
