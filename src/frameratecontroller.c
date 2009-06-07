@@ -25,8 +25,10 @@ static inline float delta( unsigned t0, unsigned t1 )
 
 void FrameRate_Init( unsigned target )
 {
+    SDL_InitSubSystem( SDL_INIT_TIMER );
+    
     if( target == 0 )
-        target = 1;
+        target = 1000;
         
     min_frame_time = 1000/target;
     printf("min_frame_time = %u ms\n", min_frame_time);

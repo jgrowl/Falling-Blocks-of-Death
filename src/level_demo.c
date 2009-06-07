@@ -1,5 +1,6 @@
 #include "level_demo.h"
 #include "frameratecontroller.h"
+#include "inputmanager.h"
 #include <stdio.h>
 
 
@@ -18,14 +19,12 @@ static void Update( void )
     // Note that even though GS_QUIT is being set here in Update(), the following Draw()
     // will still be executed.
     
-    // do main loop (Update and Draw) 4 times, then quit
-    static int times = 3;
-    if( times <= 0 )
-        GS_next = GS_QUIT;
-    --times;
-    
     printf("Update::level_demo\n");
     printf("\tframe_time = %.04f sec\n\tlevel_time = %.04f sec\n", frame_time, level_time);
+    
+    // Quit if escape is pressed
+    if( KeyTriggered( KEY_ESCAPE ) )
+        GS_next = GS_QUIT;
 }
 
 static void Draw( void )
