@@ -1,5 +1,6 @@
 #include "level_demo.h"
 #include "frameratecontroller.h"
+#include "graphicsmanager.h"
 #include "inputmanager.h"
 #include <stdio.h>
 
@@ -30,6 +31,8 @@ static void Update( void )
 static void Draw( void )
 {
     printf("Draw::level_demo\n\n");
+    
+    Graphics_Draw();
 }
 
 static void Free( void )

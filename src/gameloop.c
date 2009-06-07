@@ -1,12 +1,14 @@
 #include "gameloop.h"
 #include "windowmanager.h"
+#include "graphicsmanager.h"
 #include "gamestatemanager.h"
 #include "level_demo.h"
 
 void GameLoop( void )
 {
     GS_Initialize( &GS_level_demo );
-    WinMgr_Init( 800, 600 );    // set window size
+    WinMgr_Init( 800, 800 );    // set window size
+    Graphics_Init( 800, 800 );
     FrameRate_Init( 30 );    // Set max frame rate
     Input_Init();
 
@@ -30,11 +32,11 @@ void GameLoop( void )
 
 		while( GS_current == GS_next )
 		{
-            //pGraphics->BeginFrame();
+            Graphics_BeginFrame();
             Input_Update();
             GS_current->Update();
             GS_current->Draw();
-			//pGraphics->EndFrame();
+			Graphics_EndFrame();
 
             FrameRate_Wait();
             WinMgr_Swap();
@@ -71,5 +73,6 @@ void GameLoop( void )
 	
 	Input_Exit();
 	FrameRate_Exit();
+	Graphics_Exit();
 	WinMgr_Exit();
 }
