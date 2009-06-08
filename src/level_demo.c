@@ -23,6 +23,9 @@ static void Update( void )
     printf("Update::level_demo\n");
     printf("\tframe_time = %.04f sec\n\tlevel_time = %.04f sec\n", frame_time, level_time);
     
+    if( KeyTriggered( KEY_r ) )
+        GS_next = GS_RESTART;
+    
     // Quit if escape is pressed
     if( KeyTriggered( KEY_ESCAPE ) )
         GS_next = GS_QUIT;
