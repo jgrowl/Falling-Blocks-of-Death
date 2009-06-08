@@ -1,3 +1,16 @@
 == TODO List ==
 
-1. Fill in this TODO list. Let's have a sprint meeting this weekend.
+= Sprint 1 =
+
+[x] 0. Add basic vector and matrix support
+[ ] 1. Add audio functions; music, sound effects
+[ ] 2. Create grid for tetris block locations; Add supporting functions for manipulating grid
+[ ] 3. Create model for tetris shapes; Create all tetris shapes based on the "object" model
+[ ] 4. Create doc for gameplay; define possible inputs (up, down, left, right) and their actions in the game, define conditions for advancing to the next level and the difference between levels, define losing conditions, etc.
+[ ] 5. Add very basic block drawing capability; Draw( vec2_t pos ) should just draw a block at the 'pos' argument; this can be used for testing.
+
+
+= Sprint 2 =
+1. Add collision detection for tetris blocks
+2. Add ability to detect when game is lost
+3. Generalize draw() to take an array of triangles
