@@ -1,12 +1,13 @@
 #include "inputmanager.h"
+#include "defs.h"
 #include "SDL.h"
 #include "SDL_keyboard.h"
 #include "string.h"
 
 
-static unsigned char keys_current[SDLK_LAST] = {0};
-static unsigned char keys_previous[SDLK_LAST] = {0};
-static unsigned char* key_state = 0;
+static u8 keys_current[SDLK_LAST] = {0};
+static u8 keys_previous[SDLK_LAST] = {0};
+static u8* key_state = 0;
 
 void Input_Init( void )
 {

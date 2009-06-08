@@ -1,6 +1,7 @@
 #ifndef __GAMESTATEMANAGER_H__
 #define __GAMESTATEMANAGER_H__
 
+
 // GameState is a collection of function pointers, which are described in more detail below.
 // Each level in the game will be accessed through a GameState, allowing each level to
 // define it's own functions for loading models, applying physics, handling input, etc..
