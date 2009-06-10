@@ -81,6 +81,23 @@ void Graphics_Draw( void )
     glEnd();
 }
 
+void Graphics_DrawBlock( vec2_t pos )
+{
+    glLoadIdentity();
+    glColor4f(1.0, 0.0, 1.0, 1.0 );
+    glBegin( GL_TRIANGLES );      
+        // REMINDER: draw vertices CCW
+
+        // unit square in upper right corner
+        glVertex2i(pos[0] + 1, pos[1] + 1);
+        glVertex2i(pos[0], pos[1] + 1);
+        glVertex2i(pos[0] + 1, pos[1]);
+        glVertex2i(pos[0], pos[1] + 1);
+        glVertex2i(pos[0], pos[1]);
+        glVertex2i(pos[0] + 1, pos[1]);
+    glEnd();
+}
+
 void Graphics_Exit( void )
 {
 }

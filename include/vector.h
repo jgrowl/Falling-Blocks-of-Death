@@ -5,16 +5,16 @@
 
 //-----------------------------------------
 // constants
-const vec3_t v3_unit_x = { 1, 0, 0 };
-const vec3_t v3_unit_y = { 0, 1, 0 };
-const vec3_t v3_unit_z = { 0, 0, 1 };
-const vec3_t v3_zero_vector = { 0, 0, 0 };
-const vec3_t v3_unit_scale = { 1, 1, 1 };
+extern const vec3_t v3_unit_x;
+extern const vec3_t v3_unit_y;
+extern const vec3_t v3_unit_z;
+extern const vec3_t v3_zero_vector;
+extern const vec3_t v3_unit_scale;
 
-const vec2_t v2_unit_x = { 1, 0 };
-const vec2_t v2_unit_y = { 0, 1 };
-const vec2_t v2_zero_vector = { 0, 0 };
-const vec2_t v2_unit_scale = { 1, 1 };
+extern const vec2_t v2_unit_x;
+extern const vec2_t v2_unit_y;
+extern const vec2_t v2_zero_vector;
+extern const vec2_t v2_unit_scale;
 
 //-----------------------------------------
 // vector operations
@@ -77,58 +77,28 @@ void Vec3CrossProduct( vec3_t a, vec3_t b, vec3_t c );
 
 /// vec2_t ----------------------------
 // a = (x,y)
-inline void Vec2Set(vec2_t a, const float x, const float y)
-{
-    a[0] = x;
-    a[1] = y;
-}
+inline void Vec2Set(vec2_t a, const float x, const float y);
 
 // a = (0,0)
-inline void Vec2Zero(vec2_t a)
-{
-    a[0] = a[1] = 0;
-}
+inline void Vec2Zero(vec2_t a);
 
 // a = b
-inline void Vec2Copy(vec2_t a, const vec2_t b)
-{
-    a[0] = b[0];
-    a[1] = b[1];
-}
+inline void Vec2Copy(vec2_t a, const vec2_t b);
 
 // a = b - c
-inline void Vec2Subtract(vec2_t a, const vec2_t b, const vec2_t c)
-{
-    a[0] = b[0] - c[0];
-    a[1] = b[1] - c[1];
-}
+inline void Vec2Subtract(vec2_t a, const vec2_t b, const vec2_t c);
 
 // a = b + c
-inline void Vec2Add(vec2_t a, const vec2_t b, const vec2_t c)
-{
-    a[0] = b[0] + c[0];
-    a[1] = b[1] + c[1];
-}
+inline void Vec2Add(vec2_t a, const vec2_t b, const vec2_t c);
 
 // a = s*b
-inline void Vec2Scale(vec2_t a, const vec2_t b, const float s)
-{
-    a[0] = s*b[0];
-    a[1] = s*b[1];
-}
+inline void Vec2Scale(vec2_t a, const vec2_t b, const float s);
 
 // a = -a
-inline void Vec2Negate(vec2_t a)
-{
-    a[0] = -a[0];
-    a[1] = -a[1];
-}
+inline void Vec2Negate(vec2_t a);
 
 // a.b
-inline float Vec2DotProduct(const vec2_t a, const vec2_t b)
-{
-    return a[0]*b[0] + a[1]*b[1];
-}
+inline float Vec2DotProduct(const vec2_t a, const vec2_t b);
 
 // a : result vector
 // b : input vector
