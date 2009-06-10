@@ -1,15 +1,3 @@
-/* ---------------------------------------------------------------------------
-Project Title                   :         DAS_CS_01: Game Engine Design
-File Name                       :         Matrix3x3.cpp
-Author                          :         John Starin
-Creation Date                   :         2008-18-06
-
-Purpose                         :         2D (3x3) matrix operations.
-History
-           -(Enter date here):            (Enter modifications done on current date here)
-           -(Enter date here):            (Enter modifications done on current date here)
-----------------------------------------------------------------------------*/
-
 #include "matrix.h"
 #include <math.h>
 #include <string.h>
