@@ -1,6 +1,11 @@
 #include "graphicsmanager.h"
+#if SYSTEM == 0
 #include "GL/gl.h"
 #include "GL/glu.h"
+#elif SYSTEM == 1
+#include "OpenGL/gl.h"
+#include "OpenGL/glu.h"
+#endif
 
 void Graphics_Init( unsigned width, unsigned height )
 {

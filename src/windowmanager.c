@@ -1,5 +1,9 @@
 #include "windowmanager.h"
+#if SYSTEM == 0
 #include "SDL.h"
+#elif SYSTEM == 1
+#include "SDL/SDL.h"
+#endif
 
 static SDL_Surface* sdl_surface = 0;
 static unsigned win_width = 1;

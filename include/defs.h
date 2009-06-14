@@ -32,5 +32,11 @@ typedef float mtx44_t[16];
 #define PI 3.1415926535897932384626433832795f
 #define EPSILON 0.0001f
 
+#ifndef SYSTEM
+#define SYSTEM 0
+// 0 for Linux
+// 1 for OS X
+// Pass with -DSYSTEM=0 to gcc.
+#endif
 
 #endif // __DEFS_H__

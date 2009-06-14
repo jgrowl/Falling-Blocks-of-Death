@@ -1,5 +1,9 @@
 #include "frameratecontroller.h"
+#if SYSTEM == 0
 #include "SDL.h"
+#elif SYSTEM == 1
+#include "SDL/SDL.h"
+#endif
 
 // For debugging
 #include "stdio.h"

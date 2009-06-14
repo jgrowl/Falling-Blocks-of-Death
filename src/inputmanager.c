@@ -1,7 +1,12 @@
 #include "inputmanager.h"
 #include "defs.h"
+#if SYSTEM == 0
 #include "SDL.h"
 #include "SDL_keyboard.h"
+#elif SYSTEM == 1
+#include "SDL/SDL.h"
+#include "SDL/SDL_keyboard.h"
+#endif
 #include "string.h"
 
 
