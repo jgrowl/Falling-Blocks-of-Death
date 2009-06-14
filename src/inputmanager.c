@@ -30,7 +30,6 @@ void Input_Exit( void )
     // nothing to do here
 }
 
-
 unsigned KeyPressed( unsigned keycode )
 {
     return keys_current[ (keycode & 0xff) ];

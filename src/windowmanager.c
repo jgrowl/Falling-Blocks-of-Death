@@ -11,12 +11,13 @@ static unsigned win_height = 1;
 
 void WinMgr_Init( unsigned width, unsigned height )
 {
-    // TODO: Most of this code was copied from a tutorial somewhere. Adapt it to our engine.
+    // TODO: Most of this code was copied from a tutorial somewhere. Adapt it
+	// to our engine.
     
     // min size is (1,1)
-    if( width == 0 )
+    if ( 0 == width )
         width = 1;
-    if( height == 0 )
+    if ( 0 == height )
         height = 1;
         
     unsigned sdl_flags = SDL_OPENGL | SDL_GL_DOUBLEBUFFER | SDL_HWPALETTE;
@@ -64,9 +65,9 @@ void WinMgr_Init( unsigned width, unsigned height )
 
 void WinMgr_Resize( unsigned width, unsigned height )
 {
-    if( width == 0 )
+    if ( 0 == width )
         width = 1;
-    if( height == 0 )
+    if ( 0 == height )
         height = 1;
         
     win_width = width;
@@ -82,9 +83,10 @@ void WinMgr_GetSize( unsigned* width, unsigned* height )
 enum WinMgr_Signal WinMgr_Update( void )
 {
     static SDL_Event event;
-    while( SDL_PollEvent( &event ) )
+
+    while ( SDL_PollEvent( &event ) )
     {
-        switch( event.type )
+        switch ( event.type )
         {
         case SDL_QUIT:
             return WM_CLOSE;

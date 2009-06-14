@@ -32,9 +32,9 @@ void Graphics_Init( unsigned width, unsigned height )
 void Graphics_Resize( unsigned width, unsigned height )
 {
     // width and height must be positive
-    if ( width == 0 )
+    if ( 0 == width )
         width = 1;
-    if ( height == 0 )
+    if ( 0 == height )
         height = 1;
 
     // setup viewport

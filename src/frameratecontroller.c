@@ -31,7 +31,7 @@ void FrameRate_Init( unsigned target )
 {
     SDL_InitSubSystem( SDL_INIT_TIMER );
     
-    if( target == 0 )
+    if ( 0 == target )
         target = 1000;
         
     min_frame_time = 1000/target;

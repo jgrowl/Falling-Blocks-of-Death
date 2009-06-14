@@ -19,34 +19,33 @@ static void advance_block( void )
     static int x_dir = 1;
     static int y_dir = 0;
     
-    
     block_pos[0] += x_dir;
     block_pos[1] += y_dir;
     
-    if( x_dir )
+    if ( x_dir )
     {
-        if( block_pos[0] >= grid_width - 1 )
+        if ( block_pos[0] >= grid_width - 1 )
         {
             x_dir = 0; // stop moving in the x direction
             y_dir = 1; // move upwards
             block_pos[0] = grid_width - 1;
         }
-        else if( block_pos[0] <= 0 )
+        else if ( block_pos[0] <= 0 )
         {
             x_dir = 0;
             y_dir = -1;
             block_pos[0] = 0;
         }
     }
-    else if( y_dir )
+    else if ( y_dir )
     {
-        if( block_pos[1] >= grid_height - 1 )
+        if ( block_pos[1] >= grid_height - 1 )
         {
             y_dir = 0;
             x_dir = -1;
             block_pos[1] = grid_height - 1;
         }
-        else if( block_pos[1] <= 0 )
+        else if ( block_pos[1] <= 0 )
         {
             y_dir = 0;
             x_dir = 1;
@@ -69,12 +68,12 @@ static void Init( void )
 
 static void Update( void )
 {
-    // Note that even though GS_QUIT is being set here in Update(), the following Draw()
-    // will still be executed.
+    // Note that even though GS_QUIT is being set here in Update(), the
+	// following Draw() will still be executed.
     
     // draw every .25 seconds
     lasttime += frame_time;
-    if( lasttime > .25f )
+    if ( lasttime > .25f )
     {
         lasttime -= .25f;
         advance_block();
@@ -82,7 +81,8 @@ static void Update( void )
     
     
     printf("Update::level_demo\n");
-    printf("\tframe_time = %.04f sec\n\tlevel_time = %.04f sec\n", frame_time, level_time);
+    printf("\tframe_time = %.04f sec\n\tlevel_time = %.04f sec\n", frame_time,
+		   level_time);
     
     
     
